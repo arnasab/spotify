@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="729.0" style="-fx-background-color: RGB(28,29,33);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="678.0" style="-fx-background-color: RGB(28,29,33);">
+         <children>
+            <Label layoutX="252.0" layoutY="120.0" text="Add Your Songs" textFill="#e4e3e3">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="messagesucces" layoutX="234.0" layoutY="405.0" prefHeight="20.0" prefWidth="176.0" text="add your song succesfully" textFill="#0fdd4a" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="again" layoutX="412.0" layoutY="407.0" onMouseClicked="#againaddSongs" text="again" textFill="#eeeeee" />
+            <ImageView fx:id="photoartist" fitHeight="94.0" fitWidth="115.0" layoutX="524.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/avatar.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameArtist" alignment="CENTER" layoutX="143.0" layoutY="45.0" prefHeight="39.0" prefWidth="372.0" text="Your Name" textFill="#f2eeee">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titlesong" layoutX="234.0" layoutY="171.0" onKeyPressed="#setProfile" prefHeight="25.0" prefWidth="210.0" promptText="Title" style="-fx-background-color: RGB(51,51,51); -fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="albumsong" layoutX="234.0" layoutY="211.0" prefHeight="25.0" prefWidth="210.0" promptText="Album" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="artistsong" layoutX="234.0" layoutY="252.0" prefHeight="25.0" prefWidth="210.0" promptText="Artist" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="genersong" layoutX="234.0" layoutY="296.0" prefHeight="25.0" prefWidth="210.0" promptText="Gener" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="urlsong" layoutX="234.0" layoutY="337.0" prefHeight="25.0" prefWidth="210.0" promptText="URL Song" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="urlphotosong" layoutX="234.0" layoutY="380.0" prefHeight="25.0" prefWidth="210.0" promptText="URL Photo Song" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <Button layoutX="242.0" layoutY="436.0" mnemonicParsing="false" onKeyTyped="#addSongs" onMouseClicked="#addSongs" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: RGB(29,185,84); -fx-background-radius: 10px;" text="ADD SONG" textFill="#f8f7f7" />
+            <Button fx:id="addUrlSong" layoutX="444.0" layoutY="337.0" mnemonicParsing="false" onMouseClicked="#setAddUrlSong" style="-fx-background-color: RGB(56,199,170); -fx-background-radius: 24;" text="+" textFill="#3c00ff" />
+            <Button layoutX="444.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#setAddUrlPhotoSong" style="-fx-background-color: RGB(56,199,170); -fx-background-radius: 24;" text="+" textFill="#3c00ff" />
+            <Button layoutX="585.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: RGB(243,154,73); -fx-background-radius: 10px;" text="LOG OUT " textFill="#f8f7f7" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

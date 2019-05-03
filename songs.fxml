@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1310.0" style="-fx-background-color: RGB(28,29,33);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="browse" layoutX="38.0" layoutY="36.0" onMouseClicked="#Browse" text="Browse" textFill="#656464">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="recently" layoutX="38.0" layoutY="164.0" onMouseClicked="#RecentlyPlayed" text="Recently Played" textFill="#807e7e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="132.0" text="YOUR  MUSIC" textFill="#656464">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Group layoutY="200.0">
+               <children>
+                  <Label fx:id="songs" layoutX="38.0" layoutY="1.0" onMouseClicked="#Songs" text="Songs" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <ImageView fx:id="barsongs" fitHeight="28.0" fitWidth="13.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/border.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="albums" layoutX="37.0" layoutY="242.0" onMouseClicked="#Albums" styleClass="Albums" stylesheets="@css/whaitehover.css" text="Albums" textFill="#807e7e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label id="a5" fx:id="artists" layoutX="37.0" layoutY="281.0" onMouseClicked="#Artists" prefHeight="13.0" prefWidth="50.0" text="Artists" textFill="#807e7e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="350.0" text="PLAY LISTS" textFill="#656464">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="baralbums" fitHeight="28.0" fitWidth="13.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@image/border.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="barartists" fitHeight="28.0" fitWidth="11.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@image/border.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="barrecently" fitHeight="28.0" fitWidth="13.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@image/border.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="barbrowse" fitHeight="28.0" fitWidth="11.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@image/border.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="radio" layoutX="39.0" layoutY="73.0" onMouseClicked="#Radio" text="Radio" textFill="#656464">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="533.0" prefWidth="850.0" style="-fx-background-color: RGB(24,24,24);" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="subject" layoutX="32.0" layoutY="104.0" text="Songs" textFill="#f2f2f2">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="follow" layoutX="35.0" layoutY="186.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: RGB(29,185,84); -fx-background-radius: 15;" text="F O L L O W" textFill="#f8f7f7" />
+            <Group layoutX="46.0" layoutY="30.0">
+               <children>
+                  <TextField layoutX="80.0" layoutY="6.0" prefHeight="25.0" prefWidth="236.0" promptText="Search" style="-fx-background-radius: 12;" />
+                  <Label text="&lt;" textFill="#807e7e">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" text="&gt;" textFill="#807e7e">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="742.0" layoutY="9.0" onMouseClicked="#login" prefHeight="17.0" prefWidth="59.0" text="Log out" textFill="#909090" />
+                  <ImageView fitHeight="38.0" fitWidth="47.0" layoutX="617.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userprofile" layoutX="658.0" layoutY="5.0" prefHeight="26.0" prefWidth="76.0" text="Label" textFill="#f8f8f8">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <ScrollPane layoutX="5.0" layoutY="235.0" prefHeight="375.0" prefWidth="841.0" style="-fx-background-color: RGB(24,24,24);">
+               <content>
+                  <FlowPane fx:id="flowPane" prefHeight="373.0" prefWidth="839.0" style="-fx-background-color: RGB(24,24,24);" />
+               </content>
+            </ScrollPane>
+            <ImageView fx:id="imageArtistpage" fitHeight="109.0" fitWidth="116.0" layoutX="425.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="672.0" layoutY="147.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Label fx:id="overView" layoutX="216.0" layoutY="79.0" onMouseClicked="#OverView" text="Geners &amp; Moods" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="recommendation" layoutX="409.0" layoutY="79.0" onMouseClicked="#Recommendation" text="Recommendation System" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Ellipse fx:id="overViewbar" fill="#1fff79" layoutX="289.0" layoutY="108.0" radiusX="66.0" radiusY="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Ellipse fx:id="recommendationbar" fill="#1fff79" layoutX="511.0" layoutY="110.0" radiusX="76.0" radiusY="2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="30.0" layoutY="30.0" prefHeight="34.0" prefWidth="164.0" text="Friend activity" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="77.0" opacity="0.21" prefHeight="0.0" prefWidth="206.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="105.0" prefWidth="1310.0" style="-fx-background-color: RGB(40,40,40);" BorderPane.alignment="CENTER">
+         <children>
+            <Group layoutX="243.0" layoutY="9.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="325.0">
+               <children>
+                  <ImageView fx:id="play" fitHeight="45.0" fitWidth="49.0" layoutX="350.0" onMouseClicked="#PlayPause" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/Play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="next" fitHeight="21.0" fitWidth="25.0" layoutX="414.0" layoutY="12.0" onMouseClicked="#nextPlay" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/next.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="454.0" layoutY="12.0" onMouseClicked="#repeat" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/reapet.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="previus" fitHeight="21.0" fitWidth="25.0" layoutX="313.0" layoutY="12.0" onMouseClicked="#PreviusPlay" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/Previuse.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="shuffle" fitHeight="21.0" fitWidth="25.0" layoutX="267.0" layoutY="12.0" onMouseClicked="#ShufflePlay" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shuffel.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="sliderPlay" layoutX="3.0" layoutY="55.0" opacity="0.18" prefHeight="14.0" prefWidth="739.0" />
+               </children>
+            </Group>
+            <Group layoutX="1101.0" layoutY="13.0" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/Queue.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/multyplayer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="41.0" layoutX="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/vlume.png" />
+                     </image>
+                  </ImageView>
+                  <Slider layoutX="124.0" layoutY="12.0" opacity="0.39" prefHeight="14.0" prefWidth="71.0" />
+               </children>
+            </Group>
+            <ImageView fx:id="playSongPhoto" fitHeight="60.0" fitWidth="67.0" layoutX="24.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="namePlayer" layoutX="110.0" layoutY="23.0" text="Title" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ArtistPlayer" layoutX="110.0" layoutY="44.0" text="Artist" textFill="#949494" visible="false" />
+            <Label layoutX="1010.0" layoutY="61.0" text="time" textFill="#5b5b5b" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

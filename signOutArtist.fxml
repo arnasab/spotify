@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="729.0" style="-fx-background-color: RGB(28,29,33);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="678.0" style="-fx-background-color: RGB(28,29,33);">
+         <children>
+            <ImageView fitHeight="87.0" fitWidth="210.0" layoutX="232.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/spotifylogo.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="firstnameArtst" layoutX="234.0" layoutY="208.0" prefHeight="25.0" prefWidth="210.0" promptText="First Name" style="-fx-background-color: RGB(51,51,51); -fx-text-fill: white;" />
+            <TextField id="confrimEmail" fx:id="lastnameArtst" layoutX="234.0" layoutY="255.0" prefHeight="25.0" prefWidth="210.0" promptText="Last Name" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <Label layoutX="240.0" layoutY="126.0" text="Personal Information" textFill="#e4e3e3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupArtist" layoutX="242.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#completesignup" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: RGB(29,185,84); -fx-background-radius: 10px;" text="SIGN UP " textFill="#f8f7f7" />
+            <Label layoutX="142.0" layoutY="455.0" prefHeight="20.0" prefWidth="159.0" text="Already have an account?" textFill="#f5f2f2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="324.0" layoutY="457.0" onMouseClicked="#login" text="log in" textFill="#4feb11" />
+            <Label fx:id="error" layoutX="239.0" layoutY="360.0" text="is not coorect" textFill="#e51e1e" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField id="confrimEmail" fx:id="urlphoto" layoutX="234.0" layoutY="301.0" prefHeight="25.0" prefWidth="210.0" promptText="Location of photo" style="-fx-background-color: RGB(51,51,51);-fx-text-fill: white;" />
+            <Label fx:id="complete" layoutX="236.0" layoutY="326.0" prefHeight="20.0" prefWidth="176.0" text=" succesfully" textFill="#0fdd4a" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="addurlPhotoArtst" layoutX="444.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#setUrlphoto" style="-fx-background-color: RGB(56,199,170); -fx-background-radius: 24;" text="+" textFill="#3c00ff" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
